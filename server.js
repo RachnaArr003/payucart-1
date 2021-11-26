@@ -271,6 +271,6 @@ app.use(express.static(path.resolve(__dirname, './build')));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './build','index.html'));
 });
-app.listen(process.env.PORT || 3001, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`backend listening at port:${process.env.PORT}`);
 });
